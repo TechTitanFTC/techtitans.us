@@ -1,92 +1,167 @@
-baseURL                          = "https://techtitans.us/"  # Your domain name. Must end with "/"
-theme                            = "introduction"
-DefaultContentLanguage           = "en"                    # Default language for multilingual sites
-# disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
-# googleAnalytics                 = ""                       # https://gohugo.io/templates/internal/#google-analytics
+# Site settings
+baseurl = "https://techtitans.us/"
+languageCode = "en-us"
+title = "Hugo Stellar Theme"
+theme = "hugo-stellar-theme"
+
+googleAnalytics = "" #put your google-analytics ID here
 
 [params]
-    themeStyle                   = "light"                 # Choose "light" or "dark"
-    favicon                      = "/img/fav.ico"          # Path to favicon file
-    showRSSButton                = false                   # Show rss button in navigation
-    fadeIn                       = true                    # Turn on/off the fade-in effect
-    dateFormat                   = "Jan 2, 2006"
-    email                        = "youremail@email.com"   # E-mail address for contact section
-    # customCSS                    = ["foo.css"]             # Include custom css files placed under assets/
+  [params.header]
+    title = "Stellar"
+    description = 'Just another free, fully responsive site template built by [@ajlkn](https://twitter.com/ajlkn) for <a href="https://html5up.net">HTML5 UP</a>. Ported to [hugo](https://gohugo.io) by [@AntonPolishko](https://github.com/antonpolishko)'
+    image = "images/logo.svg"
 
-    # Configure the home page
-    [params.home]
-        introHeight              = "large"                 # Input either "medium" or "large" or "fullheight"
-        showLatest               = true                    # Show latest blog post summary
-        showAllPosts             = false                   # Set true to list all posts on home page, or set false to link to separate blog list page
-        numberOfProjectsToShow   = 3                       # Maximum number of projects to show on home page. Unset or comment out to show all projects
+  [[params.navigation]]
+    name = "Introduction"
+    href = "#intro"
 
-        localTime                = true                    # Show your current local time in contact section
-        timeZone                 = "America/Los_Angeles"   # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-    [params.projects]
-        useTwoColumns            = false                   # Use a layout with two columns instead of three
+  [[params.navigation]]
+    name = "First Section"
+    href = "#first"
 
-    # Share buttons on blog post pages
-    [params.share]
-        twitter                  = true
-        facebook                 = true
-        googlePlus               = true
-        pinterest                = true
+  [[params.navigation]]
+    name = "Second Section"
+    href = "#second"
 
-    # Social icons appear in introduction and contact section. Add as many more as you like.
-    # Find icon names here: https://fontawesome.com/cheatsheet/
-    [[params.social]]
-        url   = "https://twitter.com/"
-        icon  = "twitter"
-    [[params.social]]
-        url   = "https://facebook.com/"
-        icon  = "facebook-f"
-    [[params.social]]
-        url   = "https://linkedin.com/"
-        icon  = "linkedin-in"
+  [[params.navigation]]
+    name = "Get Started"
+    href = "#cta"
 
-# If you don't want to use the default menu, you can define one by yourself
-# [[menu.main]]
-#     name    = "Home"
-#     url     = "/"
-#     weight  = 0
-# [[menu.main]]
-#     name    = "Blog"
-#     url     = "/blog/"
-#     weight  = 1
+  [params.intro]
+    title = "Ipsum sed adipiscing"
+    description = "Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam."
+    image = "images/pic01.jpg"
+    [[params.intro.action]]
+      buttontext = "Learn More"
+      href = "generic.html"
 
-# We only use tag as a taxonomies
-# You can add more by yourself
-[taxonomies]
-  tag = "tags"
 
-[languages]
-    [languages.en]
-        languageName     = "English"
-        languageCode     = "en-us"
-        contentDir       = "content/en"
-        weight           = 0
-        title            = "Introduction"
-        [languages.en.params]
-            description  = "Website Description"   # Max 160 characters show in search results
-            # footerText   = ""                      # Text to override default footer text (markdown allowed)
+  [[params.section]]
+    id = "first"
+    title = "Magna veroeros"
+    description = ""
+    
+    # the picture is storead at static/images/
+    [params.section.features]
+      enable = true
+      [[params.section.feature]]
+        title = "Ipsum consequat"
+        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
+        icon = "fa-code"
 
-    [languages.es]
-        languageName     = "Español"
-        languageCode     = "es"
-        contentDir       = "content/es"
-        weight           = 1
-        title            = "Introducción"
-        [languages.es.params]
-            description  = "Descripcion del sitio web"
-            # footerText   = ""
+      [[params.section.feature]]
+        title = "Amed sed feugiat"
+        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
+        icon = "fa-copy"
 
-    [languages.de]
-        languageName     = "Deutsch"
-        languageCode     = "de"
-        contentDir       = "content/de"
-        weight           = 2
-        title            = "Vorstellung"
-        [languages.de.params]
-            dateFormat   = "2. January 2006"
-            description  = "Beschreibung der Webseite"
-            # footerText   = ""
+      [[params.section.feature]]
+        title = "Dolor nullam"
+        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
+        icon = "fa-diamond"
+    [params.section.footer]
+      enable = true
+      [[params.section.footer.action]]
+        buttontext = "Learn More"
+        buttonUrl = "generic.html"
+
+  [[params.section]]
+    id = "second"
+    title = "Ipsum consequat"
+    description = "Donec imperdiet consequat consequat. Suspendisse feugiat congue posuere. Nulla massa urna, fermentum eget quam aliquet."
+
+    [params.section.statistics]
+      enable = true
+      [[params.section.statistic]]
+        icon = "fa-code-fork"
+        value = "5,120"
+        text = "Etiam"
+      [[params.section.statistic]]
+        icon = "fa-folder-open-o"
+        value = "8,192"
+        text = "Magna"
+      [[params.section.statistic]]
+        icon = "fa-signal"
+        value = "2,048"
+        text = "Tempus"
+      [[params.section.statistic]]
+        icon = "fa-laptop"
+        value = "4,096"
+        text = "Aliquam"
+      [[params.section.statistic]]
+        icon = "fa-diamond"
+        value = "1,024"
+        text = "Nullam"
+
+    [params.section.content]
+      enable = true
+      text = "Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia."
+
+    [params.section.footer]
+      enable = true
+      [[params.section.footer.action]]
+        buttontext = "Learn More"
+        buttonUrl = "generic.html"
+
+
+  [[params.section]]
+    id = "cta"
+    title = "Congue imperdiet"
+    description = "Donec imperdiet consequat consequat. Suspendisse feugiat congue posuere. Nulla massa urna, fermentum eget quam aliquet."
+    [params.section.footer]
+      enable = true
+      [[params.section.footer.action]]
+        buttontext = "Get Started"
+        buttonUrl = "generic.html"
+        customClass = "special"
+      [[params.section.footer.action]]
+        buttontext = "Learn More"
+        buttonUrl = "generic.html"
+
+  [params.footer]
+    enable = true
+    title = "Aliquam sed mauris"
+    description = "Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio."
+
+    second_title = "Etiam feugiat"
+    address = "1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA"
+    phone = "(000) 000-0000 x 0000"
+    email = "information@untitled.tld"
+
+    [[params.footer.action]]
+      href = "generic.html"
+      buttontext = "Learn More"
+
+    # social icons
+    [params.footer.social_list]
+      enable = true
+
+      [[params.footer.social]]
+        title = "Twitter"
+        icon = "fa-twitter"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Facebook"
+        icon = "fa-facebook"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Instagramm"
+        icon = "fa-instagram"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Dribbble"
+        icon = "fa-dribbble"
+        link = "#"
+
+      [[params.footer.social]]
+        title = "Email"
+        icon = "fa-envelope"
+        link = "#"
+
+    # copyright
+    [params.footer.copyright]
+      enable = true
+      text = "© Untitled, Design: [HTML5UP](//html5up.net)"
