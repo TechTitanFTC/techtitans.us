@@ -1,31 +1,35 @@
 # Site settings
 baseurl = "https://techtitans.us/"
 languageCode = "en-us"
-title = "Hugo Stellar Theme"
+title = "Tech Titans FTC Team 12762"
 theme = "stellar"
 
 googleAnalytics = "" #put your google-analytics ID here
 
 [params]
   [params.header]
-    title = "Stellar"
-    description = 'Just another free, fully responsive site template built by [@ajlkn](https://twitter.com/ajlkn) for <a href="https://html5up.net">HTML5 UP</a>. Ported to [hugo](https://gohugo.io) by [@AntonPolishko](https://github.com/antonpolishko)'
+    title = "Tech Titans"
+    description = 'FTC Team 12762'
     image = "images/logo.svg"
 
   [[params.navigation]]
-    name = "Introduction"
+    name = "About"
     href = "#intro"
 
   [[params.navigation]]
-    name = "First Section"
+    name = "Outreach"
     href = "#first"
 
   [[params.navigation]]
-    name = "Second Section"
+    name = "Sponsers"
     href = "#second"
 
   [[params.navigation]]
-    name = "Get Started"
+    name = "Mentors"
+    href = "#cta"
+
+  [[params.navigation]]
+    name = "Process"
     href = "#cta"
 
   [params.intro]
@@ -123,10 +127,7 @@ googleAnalytics = "" #put your google-analytics ID here
     title = "Aliquam sed mauris"
     description = "Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio."
 
-    second_title = "Etiam feugiat"
-    address = "1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA"
-    phone = "(000) 000-0000 x 0000"
-    email = "information@untitled.tld"
+    email = "techtitans12762@gmail.com"
 
     [[params.footer.action]]
       href = "generic.html"
@@ -137,31 +138,21 @@ googleAnalytics = "" #put your google-analytics ID here
       enable = true
 
       [[params.footer.social]]
-        title = "Twitter"
-        icon = "fa-twitter"
-        link = "#"
-
-      [[params.footer.social]]
         title = "Facebook"
         icon = "fa-facebook"
-        link = "#"
+        link = "https://www.facebook.com/tyson.titans"
 
       [[params.footer.social]]
         title = "Instagramm"
         icon = "fa-instagram"
-        link = "#"
-
-      [[params.footer.social]]
-        title = "Dribbble"
-        icon = "fa-dribbble"
-        link = "#"
+        link = "https://www.instagram.com/titanstech.12762/"
 
       [[params.footer.social]]
         title = "Email"
         icon = "fa-envelope"
-        link = "#"
+        link = "mailto:techtitans12762@gmail.com"
 
     # copyright
     [params.footer.copyright]
       enable = true
-      text = "© Untitled, Design: [HTML5UP](//html5up.net)"
+      text = "© 2018 Tech Titans"
