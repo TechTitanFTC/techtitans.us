@@ -9,9 +9,9 @@ toc = true  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
-[menu.tutorial]
-  name = "Overview"
-  weight = 1
+#[menu.information]
+#  name = "Overview"
+#  weight = 1
 +++
 
 This feature can be used for publishing content such as:
