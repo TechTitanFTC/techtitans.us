@@ -1,158 +1,349 @@
-# Site settings
-baseurl = "https://techtitans.us/"
-languageCode = "en-us"
-title = "Tech Titans FTC Team 12762"
-theme = "stellar"
+# Configuration of Academic
+# Documentation: https://sourcethemes.com/academic/
+#
+# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
+# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
-googleAnalytics = "" #put your google-analytics ID here
+# The URL of your website.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = "https://techtitans.us/"
+
+# Title of your site
+title = "Tech Titans FTC Team 12762"
+
+# Your copyright notice - appears in site footer.
+# To display a copyright symbol, type `&copy;`.
+copyright = "&copy; 2018"
+
+theme = "academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+paginate = 10
+
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
+defaultContentLanguageInSubdir = false
+
+# Get last modified date for content from Git?
+enableGitInfo = false
+
+[outputs]
+  home = [ "HTML", "CSS", "RSS", "JSON" ]
+  section = [ "HTML", "RSS" ]
+
+# Configure BlackFriday Markdown rendering.
+#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
+[blackfriday]
+  hrefTargetBlank = true  # `true` opens external links in a new tab.
+  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
+  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
 
 [params]
-  [params.header]
-    title = "Tech Titans"
-    description = 'FTC Team 12762'
-    image = "images/logo.svg"
+  # AUTHOR SETUP
 
-  [[params.navigation]]
-    name = "About"
-    href = "#intro"
+  # Your details.
+  name = "Tech Titans"
+  role = "FTC Team 12762"
 
-  [[params.navigation]]
-    name = "Outreach"
-    href = "#first"
+  # Organizations/Affiliations.
+  #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
+  organizations = [ { name = "First Tech Challenge", url = "https://www.firstinspires.org/robotics/ftc" } ]
 
-  [[params.navigation]]
-    name = "Sponsers"
-    href = "#second"
+  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
+  avatar = "portrait.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
-  [[params.navigation]]
-    name = "Mentors"
-    href = "#cta"
+  # Details for the Contact Widget
+  email = "techtitans12762@gmail.com"
+  address = ""
+  office_hours = ""
+  phone = ""
+  skype = ""
+  telegram = ""
+  keybase = ""  # Your keybase.io username.
 
-  [[params.navigation]]
-    name = "Process"
-    href = "#cta"
+  # Discussion link (e.g. link to a forum, mailing list, or chat).
+  #   Uncomment line below to use.
+  #   discussion = { name = "Discuss", url = "https://discourse.gohugo.io" }
 
-  [params.intro]
-    title = "Ipsum sed adipiscing"
-    description = "Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam."
-    image = "images/pic01.jpg"
-    [[params.intro.action]]
-      buttontext = "Learn More"
-      href = "generic.html"
+  # Enable/disable map in Contact widget.
+  # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
+  # a map provider below.
+  # To use Google Maps, set `map = 1` and enter your API key that can be obtained here:
+  #   https://developers.google.com/maps/documentation/javascript/get-api-key
+  # To use OpenStreetMap tiles, set `map = 2`.
+  # To use OpenStreetMap on a high traffic site, set `map = 3` and enter your API key that can be obtained here:
+  #   https://www.mapbox.com/studio/account/tokens
+  # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
+  #
+  # Map provider:
+  #   0: No map
+  #   1: Google Maps
+  #   2: OpenStreetMap (Mapnik)
+  #   3: OpenStreetMap (Mapbox)
+  map = 0
+  map_api_key = ""
+  latitude = "37.4275"
+  longitude = "-122.1697"
+  zoom = 15
 
+  # SITE SETUP
 
-  [[params.section]]
-    id = "first"
-    title = "Magna veroeros"
-    description = ""
-    
-    # the picture is storead at static/images/
-    [params.section.features]
-      enable = true
-      [[params.section.feature]]
-        title = "Ipsum consequat"
-        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
-        icon = "fa-code"
+  # Color theme.
+  #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
+  color_theme = "dark"
 
-      [[params.section.feature]]
-        title = "Amed sed feugiat"
-        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
-        icon = "fa-copy"
+  # Font style.
+  #   Choose from `default`, `classic`, or `playfair`.
+  font = "default"
 
-      [[params.section.feature]]
-        title = "Dolor nullam"
-        description = "Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat."
-        icon = "fa-diamond"
-    [params.section.footer]
-      enable = true
-      [[params.section.footer.action]]
-        buttontext = "Learn More"
-        buttonUrl = "generic.html"
+  # Description for social sharing and search engines. If undefined, author role is used in place.
+  description = "Tech Titans, FTC Team 12762"
 
-  [[params.section]]
-    id = "second"
-    title = "Ipsum consequat"
-    description = "Donec imperdiet consequat consequat. Suspendisse feugiat congue posuere. Nulla massa urna, fermentum eget quam aliquet."
+  # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
+  sharing_image = ""
 
-    [params.section.statistics]
-      enable = true
-      [[params.section.statistic]]
-        icon = "fa-code-fork"
-        value = "5,120"
-        text = "Etiam"
-      [[params.section.statistic]]
-        icon = "fa-folder-open-o"
-        value = "8,192"
-        text = "Magna"
-      [[params.section.statistic]]
-        icon = "fa-signal"
-        value = "2,048"
-        text = "Tempus"
-      [[params.section.statistic]]
-        icon = "fa-laptop"
-        value = "4,096"
-        text = "Aliquam"
-      [[params.section.statistic]]
-        icon = "fa-diamond"
-        value = "1,024"
-        text = "Nullam"
+  # Twitter username (without @). Used when a vistor shares your site on Twitter.
+  twitter = ""
 
-    [params.section.content]
-      enable = true
-      text = "Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia."
+  # Diplay a logo in navigation bar rather than title (optional).
+  #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
+  logo = ""
 
-    [params.section.footer]
-      enable = true
-      [[params.section.footer.action]]
-        buttontext = "Learn More"
-        buttonUrl = "generic.html"
+  # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "Jan 2, 2006"
+  #   Examples: "3:04 pm" or "15:04"
+  time_format = "3:04 PM"
 
+  # Show estimated reading time for posts?
+  reading_time = false
 
-  [[params.section]]
-    id = "cta"
-    title = "Congue imperdiet"
-    description = "Donec imperdiet consequat consequat. Suspendisse feugiat congue posuere. Nulla massa urna, fermentum eget quam aliquet."
-    [params.section.footer]
-      enable = true
-      [[params.section.footer.action]]
-        buttontext = "Get Started"
-        buttonUrl = "generic.html"
-        customClass = "special"
-      [[params.section.footer.action]]
-        buttontext = "Learn More"
-        buttonUrl = "generic.html"
+  # Display comment count? Requires commenting to be enabled.
+  comment_count = true
 
-  [params.footer]
-    enable = true
-    title = "Aliquam sed mauris"
-    description = "Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio."
+  # Display next/previous section pager?
+  section_pager = false
 
-    email = "techtitans12762@gmail.com"
+  # Enable global LaTeX math rendering?
+  #   If false, you can enable it locally on a per page basis.
+  math = false
 
-    [[params.footer.action]]
-      href = "generic.html"
-      buttontext = "Learn More"
+  # Highlight.js options
+  #   highlight
+  #     Enable global source code highlighting?  If false, you can
+  #     override it for a particular page in that page's preamble.
+  #
+  #     Example: highlight = true
+  #
+  #   highlight_languages
+  #     Add support for highlighting additional languages. Support for
+  #     languages mentioned here will be included in all pages.
+  #
+  #     Example: highlight_languages = ["go", "lisp", "ocaml"]
+  #
+  #   highlight_style
+  #     Choose a different CSS style for highlighting source
+  #     code. Setting this option in a page's preamble has no
+  #     effect.
+  #
+  #     Example: highlight_style = "github-gist"
+  #
+  #   For the list of supported languages and styles, see:
+  #   https://cdnjs.com/libraries/highlight.js/
+  #
+  #   For more info on the highlighting options, see:
+  #   https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
+  highlight = true
+  highlight_languages = []
+  # highlight_style = "github"
 
-    # social icons
-    [params.footer.social_list]
-      enable = true
+  # Enable native social sharing buttons?
+  sharing = true
 
-      [[params.footer.social]]
-        title = "Facebook"
-        icon = "fa-facebook"
-        link = "https://www.facebook.com/tyson.titans"
+  # Privacy pack
+  #   Show a cookie consent message to visitors
+  #   Anonymize IP in Google Analytics (if enabled)
+  privacy_pack = false
 
-      [[params.footer.social]]
-        title = "Instagramm"
-        icon = "fa-instagram"
-        link = "https://www.instagram.com/titanstech.12762/"
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  custom_css = []
+  custom_js  = []
 
-      [[params.footer.social]]
-        title = "Email"
-        icon = "fa-envelope"
-        link = "mailto:techtitans12762@gmail.com"
+  # Publication types.
+  #   Used to categorize publications.
+  #   The index of the publication type in the list is used as its unique numerical identifier.
+  #   The numeric ID is used in a publication's frontmatter to categorize it.
+  #   The language can be edited below.
+  #   For multilingual sites, `publication_types` can be copied to each language section at the end of this file and
+  #   translated.
+  publication_types = [
+    'Uncategorized',  # 0
+    'Conference paper',  # 1
+    'Journal article',  # 2
+    'Manuscript',  # 3
+    'Report',  # 4
+    'Book',  # 5
+    'Book section'  # 6
+  ]
 
-    # copyright
-    [params.footer.copyright]
-      enable = true
-      text = "© 2018 Tech Titans"
+  # Configuration of talk pages.
+  [params.talks]
+    # Show talk time?
+    time = true
+
+  # Configuration of publication pages.
+  [params.publications]
+    # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
+    #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+    date_format = "January, 2006"
+
+  # Configuration of project pages.
+  [params.projects]
+    # List publications and talks related to the project?
+    list_children = true
+
+    # Publication list format.
+    #   0 = Simple
+    #   1 = Detailed
+    #   2 = APA
+    #   3 = MLA
+    #   4 = Stream
+    publication_format = 4
+
+    # Talk list format.
+    #   0 = Simple
+    #   1 = Detailed
+    #   2 = Stream
+    talk_format = 2
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fab" includes the following social network icons:
+  #
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
+  #   youtube, instagram, soundcloud
+  #
+  #   For email icon, use "fas" icon pack, "envelope" icon, and
+  #   "mailto:your@email.com" as the link.
+  #
+  #   Full list: https://fontawesome.com/icons
+  #
+  # Icon pack "ai" includes the following academic icons:
+  #
+  #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
+  #
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fas"
+    link = "mailto:techtitans12762@gmail.com"  # For a direct email link, use "mailto:test@example.org".
+
+  [[params.social]]
+    icon = "facebook"
+    icon_pack = "fab"
+    link = "https://www.facebook.com/tyson.titans"
+
+  [[params.social]]
+    icon = "instagram"
+    icon_pack = "fab"
+    link = "https://www.instagram.com/titanstech.12762/"
+
+  # Link to a PDF of your resume/CV from the About widget.
+  # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+  # [[params.social]]
+  #   icon = "cv"
+  #   icon_pack = "ai"
+  #   link = "files/cv.pdf"
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+[params.menus]
+  # Align the main menu to the right of the page? (true/false)
+  align_right = true
+
+[[menu.main]]
+  name = "Home"
+  url = "#about"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 3
+
+[[menu.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 4
+
+[[menu.main]]
+  name = "Tutorials"
+  url = "/tutorial/"
+  weight = 5
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 6
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[menu.main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 7
+
+# Search.
+[params.search]
+  # Search provider:
+  #   0: No search engine
+  #   1: Built-in (Fuse)
+  #   2: Algolia (https://www.algolia.com)
+  engine = 1
+
+  # Configuration of Algolia search engine.
+  # Paste the values from your Algolia dashboard.
+  [params.search.algolia]
+    app_id = ""
+    api_key = ""
+    index_name = ""
+    show_logo = false
+
+# Taxonomies.
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  publication_type = "publication_types"
+
+# Languages
+#   Create a [languages.X] block for each language you want, where X is the language ID.
+#   Refer to https://sourcethemes.com/academic/docs/language/
+
+# Configure the English version of the website.
+[languages.en]
+  languageCode = "en-us"
+
+# Uncomment the lines below to configure your website in a second language.
+#[languages.zh]
+#  languageCode = "zh-Hans"
+#  title = "Chinese website title..."
+#  [languages.zh.params]
+#    name = "Your name in Chinese..."
+#    role = "Your role in Chinese..."
+#  [[languages.zh.menu.main]]
+#    name = "Wo"
+#    url = "#about"
+#    weight = 1
