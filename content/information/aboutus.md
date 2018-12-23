@@ -48,8 +48,8 @@ Georgia.
 
 ## Contact Information:
 
-Website:​​ ​ techtitans.us​
+Website:​​ ​ [techtitans.us​](https://techtitans.us​)
 
-Team Email:​​  techtitans12762@gmail.com
+Team Email:​​  [techtitans12762@gmail.com](mailto:techtitans12762@gmail.com)
 
-Monica and Joe Gerhardstein (mentors)​: ​ mo-joe@gerhardstein.net
+Monica and Joe Gerhardstein (mentors)​: ​ [mo-joe@gerhardstein.net](mailto:mo-joe@gerhardstein.net)
