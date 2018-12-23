@@ -1,28 +1,20 @@
 +++
-title = "2018-2019 Goals"
-subtitle = "This year's targets"
+title = "Goals"
 
-date = 2016-04-20T00:00:00
-lastmod = 2018-01-13T00:00:00
-draft = false
+date = 2018-09-09T00:00:00
+# lastmod = 2018-09-09T00:00:00
 
-# Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = []
+draft = false  # Is this a draft? true/false
+toc = true  # Show table of contents? true/false
+type = "docs"  # Do not modify.
 
-tags = ["2018-2019"]
-summary = "2018-2019 Team Goals"
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your project's folder. 
-[image]
-  # Caption (optional)
-  caption = ""
-
-  # Focal point (optional)
-  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-  focal_point = ""
-
+# Add menu entry to sidebar.
+linktitle = "Goals"
+[menu.information]
+  parent = "Team"
+  weight = 3
 +++
+
 ## Overall
 - We hope to get some awards including, Rockwell Collins, and the design
 award!

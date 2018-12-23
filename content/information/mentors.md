@@ -1,5 +1,5 @@
 +++
-title = "Example Page"
+title = "Mentors"
 
 date = 2018-09-09T00:00:00
 # lastmod = 2018-09-09T00:00:00
@@ -11,16 +11,8 @@ type = "docs"  # Do not modify.
 # Add menu entry to sidebar.
 linktitle = "Mentors"
 [menu.information]
-  parent = "People"
+  parent = "Team"
   weight = 2
 +++
 
-In this tutorial, I'll share my top 10 tips for getting started with Academic:
-
-## Tip 1
-
-...
-
-## Tip 2
-
-...
+## Mentors

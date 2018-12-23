@@ -286,7 +286,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Info"
-  url = "/information/team"
+  url = "/information/aboutus"
   weight = 5
 
 [[menu.main]]
